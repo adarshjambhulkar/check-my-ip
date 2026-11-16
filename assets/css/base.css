@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    background: var(--page-bg);
+    color: var(--text-main);
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    overflow-x: hidden;
+    transition: background .4s ease, color .4s ease;
+}
+
+/* ---------- Background blobs ---------- */
+.bg-blobs {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    background: var(--secondary);
+    animation: float 18s ease-in-out infinite;
+}
+
+.blob-1 {
+    width: 420px;
+    height: 420px;
+    opacity: .55;
+    top: -120px;
+    left: -100px;
+}
+
+.blob-2 {
+    width: 380px;
+    height: 380px;
+    opacity: .4;
+    bottom: -120px;
+    right: -80px;
+    animation-delay: -6s;
+}
+
+.blob-3 {
+    width: 300px;
+    height: 300px;
+    opacity: .25;
+    top: 40%;
+    left: 55%;
+    animation-delay: -12s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(40px, -30px) scale(1.08);
+    }
+
+    66% {
+        transform: translate(-30px, 30px) scale(.95);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .blob {
+        animation: none;
+    }
+}

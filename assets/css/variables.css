@@ -1,0 +1,48 @@
+/*
+ * 3-color system (60-30-10)
+ *   60% dominant  - neutral navy: page base, glass surfaces, text
+ *   30% secondary - sky: background blobs, tile tint, hover borders
+ *   10% accent    - orange: primary action, CIDR badge, focus, copied state
+ */
+:root,
+[data-bs-theme="dark"] {
+    /* 60 - dominant */
+    --page-bg: #0a0f1c;
+    --text-main: #eef0f8;
+    --text-muted: rgba(238, 240, 248, .6);
+    --glass-bg: rgba(255, 255, 255, .06);
+    --glass-border: rgba(255, 255, 255, .12);
+    --glass-shadow: 0 20px 50px rgba(0, 0, 0, .45);
+
+    /* 30 - secondary */
+    --secondary: #0ea5e9;
+    --secondary-rgb: 14, 165, 233;
+    --glass-tile: rgba(var(--secondary-rgb), .08);
+    --glass-tile-hover: rgba(var(--secondary-rgb), .16);
+
+    /* 10 - accent */
+    --accent: #fb923c;
+    --accent-rgb: 251, 146, 60;
+    --on-accent: #1a0b00;
+}
+
+[data-bs-theme="light"] {
+    /* 60 - dominant */
+    --page-bg: #f1f6fb;
+    --text-main: #151a30;
+    --text-muted: rgba(21, 26, 48, .6);
+    --glass-bg: rgba(255, 255, 255, .5);
+    --glass-border: rgba(255, 255, 255, .8);
+    --glass-shadow: 0 20px 50px rgba(40, 45, 90, .14);
+
+    /* 30 - secondary */
+    --secondary: #0ea5e9;
+    --secondary-rgb: 14, 165, 233;
+    --glass-tile: rgba(var(--secondary-rgb), .07);
+    --glass-tile-hover: rgba(var(--secondary-rgb), .13);
+
+    /* 10 - accent */
+    --accent: #f97316;
+    --accent-rgb: 249, 115, 22;
+    --on-accent: #1a0b00;
+}
