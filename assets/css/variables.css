@@ -5,12 +5,13 @@
  *   10% accent    - orange: primary action, CIDR badge, focus, copied state
  */
 :root,
-[data-bs-theme="dark"] {
+[data-theme="dark"] {
     /* 60 - dominant */
     --page-bg: #0a0f1c;
     --text-main: #eef0f8;
-    --text-muted: rgba(238, 240, 248, .6);
-    --glass-bg: rgba(255, 255, 255, .06);
+    --text-muted: #b4bccd;
+    /* Navy-tinted glass keeps text contrast >= 4.5:1 even over bright blobs */
+    --glass-bg: rgba(10, 15, 28, .55);
     --glass-border: rgba(255, 255, 255, .12);
     --glass-shadow: 0 20px 50px rgba(0, 0, 0, .45);
 
@@ -26,11 +27,11 @@
     --on-accent: #1a0b00;
 }
 
-[data-bs-theme="light"] {
+[data-theme="light"] {
     /* 60 - dominant */
     --page-bg: #f1f6fb;
     --text-main: #151a30;
-    --text-muted: rgba(21, 26, 48, .6);
+    --text-muted: #464e66;
     --glass-bg: rgba(255, 255, 255, .5);
     --glass-border: rgba(255, 255, 255, .8);
     --glass-shadow: 0 20px 50px rgba(40, 45, 90, .14);

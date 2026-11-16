@@ -21,7 +21,7 @@
     }
 
     function applyTheme(theme) {
-        root.setAttribute('data-bs-theme', theme);
+        root.setAttribute('data-theme', theme);
         updateToggle(theme);
         try {
             localStorage.setItem(STORAGE_KEY, theme);
@@ -29,12 +29,12 @@
     }
 
     // Apply immediately, before the body renders
-    root.setAttribute('data-bs-theme', getSavedTheme());
+    root.setAttribute('data-theme', getSavedTheme());
 
     document.addEventListener('DOMContentLoaded', () => {
-        updateToggle(root.getAttribute('data-bs-theme'));
+        updateToggle(root.getAttribute('data-theme'));
         document.getElementById('themeToggle').addEventListener('click', () => {
-            applyTheme(root.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark');
+            applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
         });
     });
 })();

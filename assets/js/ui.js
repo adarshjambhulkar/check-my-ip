@@ -22,14 +22,14 @@ const UI = (function () {
 
     function showToast(message) {
         const toast = document.createElement('div');
-        toast.className = 'toast glass-toast align-items-center';
-        toast.role = 'status';
-        toast.innerHTML = '<div class="d-flex"><div class="toast-body"></div>' +
-            '<button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button></div>';
-        toast.querySelector('.toast-body').textContent = message;
+        toast.className = 'toast';
+        toast.textContent = message;
         document.querySelector('.toast-container').appendChild(toast);
-        toast.addEventListener('hidden.bs.toast', () => toast.remove());
-        new bootstrap.Toast(toast, { delay: 2000 }).show();
+        requestAnimationFrame(() => toast.classList.add('show'));
+        setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => toast.remove(), 250);
+        }, 2000);
     }
 
     return { setValue, setText, setRefreshing, showToast };

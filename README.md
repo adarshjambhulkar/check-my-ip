@@ -60,6 +60,6 @@ Hosted on **GitHub Pages** from the `main` branch (root). Every push to `main` r
 
 ## Tech
 
-- Plain HTML, CSS, and JavaScript
-- [Bootstrap 5.3](https://getbootstrap.com/) (via CDN) for layout and toasts
+- Plain HTML, CSS, and JavaScript - no frameworks, no third-party scripts or stylesheets
 - Inline SVG icons
+- WCAG AA text contrast (>= 4.5:1) in both themes
