@@ -2,6 +2,8 @@
 
 A lightweight, single-page web app that shows your public IPv4 and IPv6 addresses along with your IPv4 /24 subnet range.
 
+**Live:** https://adarshjambhulkar.github.io/check-my-ip/
+
 ## Features
 
 - **IPv4 address** via [`api.ipify.org`](https://api.ipify.org)
@@ -17,11 +19,19 @@ A lightweight, single-page web app that shows your public IPv4 and IPv6 addresse
 
 ## Usage
 
+Visit the live site: https://adarshjambhulkar.github.io/check-my-ip/
+
+### Run locally
+
 No build step or dependencies to install. Open `index.html` in a browser, or serve the folder with any static file server:
 
 ```bash
 npx serve .
 ```
+
+## Deployment
+
+Hosted on **GitHub Pages** from the `main` branch (root). Every push to `main` redeploys the site automatically, usually within a minute or two.
 
 ## Tech
 
