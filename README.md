@@ -35,6 +35,10 @@ npx serve .
 check-my-ip/
 ├── index.html              # Page markup + inline SVG icon sprite
 ├── assets/
+│   ├── icons/
+│   │   ├── favicon.svg           # Main favicon (radar sweep "found you")
+│   │   ├── favicon-32.png        # PNG fallback
+│   │   └── apple-touch-icon.png  # iOS home-screen icon (180x180)
 │   ├── css/
 │   │   ├── variables.css   # 60-30-10 color tokens (dark + light themes)
 │   │   ├── base.css        # Reset, page layout, animated background
